@@ -1,0 +1,29 @@
+{
+  "name": "burger-boss",
+  "version": "1.0.0",
+  "description": "express handlebars app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matttali09/Burger-Boss.git"
+  },
+  "keywords": [
+    "express",
+    "handlebars",
+    "node"
+  ],
+  "author": "Matt Taliancich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matttali09/Burger-Boss/issues"
+  },
+  "homepage": "https://github.com/matttali09/Burger-Boss#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
