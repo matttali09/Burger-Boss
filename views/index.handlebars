@@ -1,0 +1,54 @@
+{{!-- get image from static folder --}}
+<img class="rounded mx-auto d-block" src="assets/img/burger-img.jpg" alt="burger">
+
+<h1 class="text-center">Eat-Da-Burger!</h1>
+
+<div class="row">
+  <div class="col-xs-6 justify-content-center text-center mx-auto">
+    <h2>Burgers that are not devoured!</h2>
+
+    {{!-- not devoured applied for each in burgers formated by the partial burger_block through the burgers directory
+    in partials --}}
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  {{!-- devoured column formatted by burger_block partial --}}
+  <div class="col-xs-6 justify-content-center text-center mx-auto">
+    <h2>Burgers that are devoured!</h2>
+
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block devoured=false}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+<h2 class="text-center">Add a burger!</h2>
+{{!-- add burger form --}}
+<form class="create-form text-center">
+
+  <div class="form-group">
+    <label for="burg">Name of your Burger:</label>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+
+  <button type="submit">Make the Burger!</button>
+</form>
+<form class="delete-form text-center">
+  <div class="form-group">
+    <label for="delete-burger">Name of your Burger:</label>
+  	<input type="text" class="delete-burger mt-5" id="del" name="burger_name">
+  </div>
+
+  <button type="submit" class="delete-burger">DELETE!</button>
+
+</form>

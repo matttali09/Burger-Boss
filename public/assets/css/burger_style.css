@@ -1,0 +1,28 @@
+/* body styling */
+body {
+    background: #ff7f26;
+}
+
+/* list styling */
+li {
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px;
+    background: grey;
+}
+  
+/* form styling */
+.label {
+    font-weight: bold;
+} 
+.form-group {
+    margin-bottom: 5px;
+}
+
+/* button styling */
+/* .devour {
+    float: right;
+}
+.delete-burger {
+    float: right;
+} */
