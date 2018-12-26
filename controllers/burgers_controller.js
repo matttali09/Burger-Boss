@@ -46,12 +46,11 @@ router.put("/api/burgers/:id", function (req, res) {
 });
 
 router.delete("/api/burgers/:burger_name", function (req, res) {
-    var condition = "burger_name = " + req.params.burger_name;
-    console.log(req.params.burger_name)
+    // needs to be set in string for multiple word variables in sql
+    var condition = "burger_name = '" + req.params.burger_name + "'";
 
     console.log("condition", condition);
-    
-
+       
     burger.delete(condition, function (result) {
         if (result.affectedRows == 0) {
             // If no rows were changed, then the burger_name must not exist, so 404

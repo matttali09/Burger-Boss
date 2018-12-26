@@ -45,9 +45,10 @@ $(function() {
   
     $(".delete-form").on("submit", function(event) {
       event.preventDefault();
+      var burger_name = $("#del").val().trim();
 
       // Send the DELETE request.
-      $.ajax("/api/burgers/" + $("#del").val().trim(), {
+      $.ajax("/api/burgers/" + burger_name, {
         type: "DELETE"
       }).then(
         function() {

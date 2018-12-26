@@ -22,7 +22,6 @@ var burger = {
   },
   // delete burgers 
   delete: function(condition, cb) {
-    console.log(condition +"1")
     orm.delete("burgers", condition, function(res) {
       cb(res);
     });
